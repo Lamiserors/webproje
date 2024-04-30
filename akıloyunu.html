@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>  <!-- Sayfa başlığı -->
+    <link rel="stylesheet" href="oyun.css">  <!-- Harici CSS dosyasını bağlama --> 
+    <style>
+ 
+
+        .gallery {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 200px genişliğinde sütunlar */
+          gap: 10px; /* Sütunlar ve satırlar arasındaki boşluk */
+        }
+      
+        .gallery img {
+          width: 100%; /* Resimlerin sütun genişliğine tam olarak sığması */
+          height: auto; /* Oranları korumak için */
+          display: block; /* Görüntüleri birbirinden ayırmak için */
+        }
+      </style>
+</head>
+<body>
+    <div id="game-container">
+        <h1>Farklı Hafıza Oyunu</h1>  <!-- Oyun başlığı -->
+        <div id="game-grid"></div> <!-- Oyun alanı -->
+        <button onclick="resetGame()">Reset</button>  <!-- Oyunu sıfırlama düğmesi -->
+        <div id="result"></div> <!-- Sonuçlar alanı -->
+    </div>
+    <div id="sidebar">
+        <h2>Nasıl Oynanır</h2> <!-- Oyun nasıl oynanır başlığı -->
+        <p>Bir hafıza oyunu tasarladım.Bu oyunda 16 tane kart var ve bu oyunda amaç aynı resmin olduğu kartları bulup birbiriyle eşleştirmektir.Oyunda ilk olarak 3 tane bebek resminden birini seçmemiz gerekiyor daha sonra ise hafıza kart oyununu oynamaya başlayabiliriz.Oyunda extra olarak eşleştirdiğiniz meyvenin ismini, kartları eşleştirdikten sonra yukarıdan çıkan küçük ekrana yazmanız gerekmektedir.Eğer eşleşen resimlerde ne olduğunu doğru yazarsanız seçtiğiniz bebeğin boyutu büyüyecektir.
+       
+    </div>
+    <div id="baby-selection">
+        <h2>Bebek Seçiniz</h2> <!-- Bebek seçimi başlığı -->
+        <div class="gallery">
+            <!-- Bebek resimleri -->
+            <img src="bebek1.jpeg" alt="Baby 1" onclick="selectBaby(1)"> 
+            <img src="bebek2.jpeg" alt="Baby 2" onclick="selectBaby(2)">
+            <img src="bebek3.jpeg" alt="Baby 3" onclick="selectBaby(3)">
+        </div>
+    </div>
+    <div id="baby-container">
+        <img id="baby" src="" alt="Selected Baby">
+    </div>
+       <!-- Harici JavaScript dosyasını bağlama -->
+    <script src="jsprojem.js"></script>  
+</body>
+</html>

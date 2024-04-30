@@ -1,0 +1,41 @@
+/* Ortalama elemanları ortalamak için */
+.container {
+    text-align: center;
+}
+
+#sidebar {
+    position: fixed; /* Sabit konumlandırma */
+    top: 0; /* Sayfanın üst kısmına sabitleme */
+    right: 0;  /* Sayfanın sağ kısmına sabitleme */
+    width: 400px; /* Genişlik */
+    background-color: #f0f0f0; /*arkaplan rengi*/
+    padding: 40px; /* İç boşluklar */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);  /* Gölgelendirme */
+}
+
+#game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* 4 sütunlu, her sütun 100 piksel genişliğinde */
+    grid-gap: 10px; /* Sütunlar ve satırlar arasındaki boşluk */
+    margin-bottom: 20px; /* Alt boşluk */
+}
+
+#game-grid div {
+    width: 100px; /*genişlik*/
+    height: 100px; /*yükseklik*/
+    border: 1px solid black;  /*kenarlık*/
+    background-color: lightgray; /*arkaplan rengi*/
+    cursor: pointer; /*imleç türü*/
+}
+
+#result {
+    font-weight: bold; /*kalın font*/
+}
+/*bebek resmi*/
+#baby {
+    width: 50px; /*genişlik*/
+    height: 50px; /*yükseklik*/
+    background-image: url('bebek1.jpeg'); /* Bebek resminin URL'sini güncelleyin */
+    background-size: cover; /* Arka plan resmi boyutu */
+    margin-top: 20px;  /*Üst boşluk */
+}
